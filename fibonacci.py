@@ -1,5 +1,5 @@
 def fibonacci(limit):
-    a,b = 0,1
+    a,b = 0,3
     while(limit):
         print(a)
         a,b = b,a+b
