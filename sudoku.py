@@ -16,6 +16,7 @@ def find_empty_space():
         for col in range(9):
             if grid[row][col] == 0:
                 return row, col
+    return None
 
 
 def check_possible(row, column, value):
@@ -44,16 +45,8 @@ def print_grid():
     print('___________________________________')
 
 
-def is_solved():
-    for i in range(9):
-        for j in range(9):
-            if grid[i][j] == 0:
-                return False
-    return True
-
-
 def solve():
-    if is_solved():
+    if not find_empty_space():
         return True
 
     row, column = find_empty_space()
